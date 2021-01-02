@@ -12,6 +12,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         /// </summary>
         /// <param name="tickerId">The ticker id</param>
         /// <param name="field">The ticker field</param>
+        /// <param name="tickAttrib">The tick attribute: 0 - return based, 1- price based.</param>
         /// <param name="impliedVolatility">The implied volatility calculated by the TWS option modeler, using the specified tick type value</param>
         /// <param name="delta">The option delta value</param>
         /// <param name="optPrice">The option price</param>
@@ -23,6 +24,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         public TickOptionComputationEventArgs(
             int tickerId,
             int field,
+            int tickAttrib,
             double impliedVolatility,
             double delta,
             double optPrice,
@@ -49,6 +51,15 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         /// Gets the field
         /// </summary>
         public int Field
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// Gets the tick attribute: 0 - return based, 1- price based.
+        /// </summary>
+        public int TickAttrib
         {
             get;
             private set;

@@ -648,6 +648,12 @@ namespace AutoFinance.Broker.InteractiveBrokers.Wrappers
         }
 
         /// <inheritdoc/>
+        public void replaceFAEnd(int reqId, string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc/>
         public void rerouteMktDataReq(int reqId, int conId, string exchange)
         {
             throw new NotImplementedException();
@@ -730,8 +736,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.Wrappers
         /// <inheritdoc/>
         public void tickEFP(int tickerId, int tickType, double basisPoints, string formattedBasisPoints, double impliedFuture, int holdDays, string futureLastTradeDate, double dividendImpact, double dividendsToLastTradeDate)
         {
-            var eventArgs = new TickEFPEventArgs(tickerId, tickType, basisPoints, formattedBasisPoints, impliedFuture, holdDays,
-                futureLastTradeDate, dividendImpact, dividendsToLastTradeDate);
+            var eventArgs = new TickEFPEventArgs(tickerId, tickType, basisPoints, formattedBasisPoints, impliedFuture, holdDays, futureLastTradeDate, dividendImpact, dividendsToLastTradeDate);
             this.TickEFPEvent?.Invoke(this, eventArgs);
         }
 
@@ -750,15 +755,10 @@ namespace AutoFinance.Broker.InteractiveBrokers.Wrappers
         }
 
         /// <inheritdoc/>
-        public void tickOptionComputation(int tickerId, int field, double impliedVolatility, double delta, double optPrice, double pvDividend, double gamma, double vega, double theta, double undPrice)
+        public void tickOptionComputation(int tickerId, int field, int tickAttrib, double impliedVolatility, double delta, double optPrice, double pvDividend, double gamma, double vega, double theta, double undPrice)
         {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc/>
-        public void tickPrice(int tickerId, int field, double price, int canAutoExecute)
-        {
-            throw new NotImplementedException();
+            var eventArgs = new TickOptionComputationEventArgs(tickerId, field, tickAttrib, impliedVolatility, delta, optPrice, pvDividend, gamma, vega, theta, undPrice);
+            this.TickOptionComputationEvent?.Invoke(this, eventArgs);
         }
 
         /// <inheritdoc/>
