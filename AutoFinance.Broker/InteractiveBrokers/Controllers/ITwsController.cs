@@ -33,8 +33,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.Controllers
         /// <param name="takePrice">The take profit price</param>
         /// <param name="stopPrice">The stop loss price</param>
         /// <returns>True if the orders are correctly placed</returns>
-        Task<bool> PlaceBracketOrder(Contract contract, string entryAction, double quantity, double entryOrderPrice,
-            double takePrice, double stopPrice);
+        Task<bool> PlaceBracketOrder(Contract contract, string entryAction, double quantity, double entryOrderPrice, double takePrice, double stopPrice);
 
         /// <summary>
         /// Places a bracket order with a limit order entry and stop limit exit
@@ -47,9 +46,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.Controllers
         /// <param name="stopActivationPrice">The stop loss price</param>
         /// <param name="stopLimitPrice">The price to put the limit after the stop activation price is touched</param>
         /// <returns>True if the orders are correctly placed</returns>
-        Task<bool> PlaceBracketOrder(Contract contract, string entryAction, double quantity,
-            double entryOrderPrice, double takePrice, double stopActivationPrice, double stopLimitPrice);
-
+        Task<bool> PlaceBracketOrder(Contract contract, string entryAction, double quantity, double entryOrderPrice, double takePrice, double stopActivationPrice, double stopLimitPrice);
 
         /// <summary>
         /// Cancels all orders with the given symbol

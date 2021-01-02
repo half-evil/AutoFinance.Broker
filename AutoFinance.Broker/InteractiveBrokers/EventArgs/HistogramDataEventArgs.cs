@@ -24,7 +24,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         /// Gets the request id.
         /// </summary>
         public int RequestId { get; private set; }
-        
+
         /// <summary>
         /// Gets the histogram entries.
         /// </summary>

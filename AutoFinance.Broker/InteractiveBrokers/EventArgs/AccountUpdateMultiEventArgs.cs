@@ -48,12 +48,12 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         public string Key { get; private set; }
 
         /// <summary>
-        /// Get the account value
+        /// Gets the account value
         /// </summary>
         public string Value { get; private set; }
 
         /// <summary>
-        /// Get the account currency
+        /// Gets the account currency
         /// </summary>
         public string Currency { get; private set; }
     }

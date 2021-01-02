@@ -36,17 +36,17 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         public string Account { get; private set; }
 
         /// <summary>
-        /// Get the Tag value
+        /// Gets the Tag value
         /// </summary>
         public string Tag { get; private set; }
 
         /// <summary>
-        /// Get the account value
+        /// Gets the account value
         /// </summary>
         public string Value { get; private set; }
 
         /// <summary>
-        /// Get the account currency
+        /// Gets the account currency
         /// </summary>
         public string Currency { get; private set; }
     }

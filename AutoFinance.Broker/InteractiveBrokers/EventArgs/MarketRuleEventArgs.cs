@@ -1,9 +1,9 @@
 ﻿// Licensed under the Apache License, Version 2.0.
 
-using IBApi;
-
 namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
 {
+    using IBApi;
+
     /// <summary>
     /// The event arguments for the account download end event
     /// </summary>

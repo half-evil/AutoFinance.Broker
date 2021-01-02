@@ -1,10 +1,9 @@
 ﻿// Licensed under the Apache License, Version 2.0.
 
-using AutoFinance.Broker.InteractiveBrokers.EventArgs;
-
 namespace AutoFinance.Broker.InteractiveBrokers.Exceptions
 {
     using System;
+    using AutoFinance.Broker.InteractiveBrokers.EventArgs;
 
     /// <summary>
     /// A generic exception class for TWS exceptions

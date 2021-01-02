@@ -30,7 +30,7 @@ namespace AutoFinance.Broker.InteractiveBrokers.EventArgs
         /// <summary>
         /// Gets the order
         /// </summary>
-        public Order Order{ get; private set; }
+        public Order Order { get; private set; }
 
         /// <summary>
         /// Gets the order state
