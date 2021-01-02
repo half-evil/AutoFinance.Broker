@@ -1,3 +1,8 @@
+# Readme for my fork
+My changes are:
+- replace the dependency for tws-api-dotnet-standard with the official tws client library, because the IB library targets .Net Standard 2.0 since 979 https://www.interactivebrokers.com/en/index.php?f=24356
+- Introduce a global timeout property to get rid of the ```A task was canceled. ```error. Some tasks like ```GetContractAsync``` need more time to execute than the hardcoded 5 seconds. Especially when you request option chains, IB needs more time to send you the data.
+
 # Interactive Brokers (TWS) API wrapper
 This project is a wrapper around the Interactive Brokers C# client API. It aims to make TWS APIs easier to use by making the multithreaded design look single-threaded to the user. It's in dotnet core, so use it in Linux or Windows.
 
