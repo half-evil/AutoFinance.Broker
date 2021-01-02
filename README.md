@@ -2,6 +2,16 @@
 My changes are:
 - replace the dependency for tws-api-dotnet-standard with the official tws client library, because the IB library targets .Net Standard 2.0 since 979 https://www.interactivebrokers.com/en/index.php?f=24356
 - Introduce a global timeout property to get rid of the ```A task was canceled. ```error. Some tasks like ```GetContractAsync``` need more time to execute than the hardcoded 5 seconds. Especially when you request option chains, IB needs more time to send you the data.
+- Updating method signatures of ```tickOptionComputation``` and ```tickPrice```
+
+## Installation
+Please note due to Interactive Brokers license restriction, you need to manually download and copy TWS API source to `packages` folder.
+
+1. Clone `git clone https://github.com/half-evil/AutoFinance.Broker.git` 
+2. Goto https://interactivebrokers.github.io/ and Accept [TWS API license]
+3. Download and Install [TWS API v9.81](https://interactivebrokers.github.io/downloads/TWS%20API%20Install%20981.01.msi) 
+4. Copy `<TWS API install folder>\source\CSharpClient\client` to `IB.CSharpApiClient\packages`
+5. Build IB.CSharpApiClient
 
 # Interactive Brokers (TWS) API wrapper
 This project is a wrapper around the Interactive Brokers C# client API. It aims to make TWS APIs easier to use by making the multithreaded design look single-threaded to the user. It's in dotnet core, so use it in Linux or Windows.
